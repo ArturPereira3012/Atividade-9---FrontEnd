@@ -2,24 +2,25 @@ import { Outlet, Link } from "react-router-dom";
 
 const Layout = () => {
   return (
-    <>
+    <div>
+      <header>
+        <h1>Meu Site</h1>
+      </header>
       <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/blogs">Blogs</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
+        <Link to="/">Home</Link>
+        <Link to="/blogs">Blogs</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/highlights">Highlights</Link> 
+        <Link to="/conquistas">Conquistas</Link> 
       </nav>
-
-      <Outlet />
-    </>
-  )
+      <div className="container">
+        <Outlet /> 
+      </div>
+      <footer>
+        <p>© 2024 Meu Site. Todos os direitos reservados.</p>
+      </footer>
+    </div>
+  );
 };
 
 export default Layout;
